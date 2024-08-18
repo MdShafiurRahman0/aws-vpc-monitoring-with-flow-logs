@@ -187,3 +187,32 @@
 ![image](https://github.com/user-attachments/assets/868c889a-f781-4f62-8328-fa0ad8fc35fd)
 
 ![image](https://github.com/user-attachments/assets/ec598657-9195-41cc-a58e-854016e39dc0)
+
+
+# Replace with the following:
+
+"Principal": {
+   "Service": "vpc-flow-logs.amazonaws.com"
+},
+
+
+![image](https://github.com/user-attachments/assets/7dc1c81e-64b5-481f-aa1f-0ff214747436)
+
+7. Choose Next.
+8. On the Add permissions page, search for the policy you've created - 
+9. Select your policy.
+
+![image](https://github.com/user-attachments/assets/85da3ade-2cb4-47bd-9fad-c13d16468e7e)
+
+
+10. Choose Next.
+11. Enter a name for your role - 
+12. Choose Create role.
+
+
+![image](https://github.com/user-attachments/assets/5b6afbca-4bac-43d6-8de3-d9fbbcef8c7e)
+
+![image](https://github.com/user-attachments/assets/2a06c236-12e7-49aa-af8a-bdd0437e9e75)
+
+
+![image](https://github.com/user-attachments/assets/f89d4d79-5e80-44fc-b5ef-57dbd3168e31)
