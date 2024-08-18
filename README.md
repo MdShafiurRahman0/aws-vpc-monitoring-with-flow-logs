@@ -134,3 +134,56 @@
 
 
 ![image](https://github.com/user-attachments/assets/3db0d933-16e0-4695-a658-171b26dd16ac)
+
+
+# Step 8: Set Up A Flow Log IAM Policy and Role
+
+![image](https://github.com/user-attachments/assets/c10b7a57-18b1-40ce-ae14-70671fdb4423)
+
+![image](https://github.com/user-attachments/assets/37a0c66a-3380-4016-9b88-8330515ed667)
+
+![image](https://github.com/user-attachments/assets/1542bbd7-5319-4b08-be02-c7ed7c8e4524)
+
+
+1. Choose JSON.
+2. Delete everything in the Policy editor.
+3. Add this JSON policy to the empty Policy editor
+
+**
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+**
+
+
+![image](https://github.com/user-attachments/assets/369fca33-b751-4423-a3ca-d88742df53bd)
+
+
+![image](https://github.com/user-attachments/assets/ebd2b501-e49c-4b8a-a9ba-3014bc7228c5)
+
+
+4. Choose Next.
+5. For your policy's name, let's call it 
+6. Choose Create policy
+
+
+![image](https://github.com/user-attachments/assets/60be5724-38e5-489f-9450-d5a972ee9cde)
+
+![image](https://github.com/user-attachments/assets/868c889a-f781-4f62-8328-fa0ad8fc35fd)
+
+![image](https://github.com/user-attachments/assets/ec598657-9195-41cc-a58e-854016e39dc0)
