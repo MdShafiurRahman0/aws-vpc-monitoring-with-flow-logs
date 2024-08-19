@@ -259,7 +259,7 @@
 
 
 
-# Step 8: Create a Peering Connection
+# Step 10: Create a Peering Connection
 
 
 
@@ -290,3 +290,58 @@
 ![image](https://github.com/user-attachments/assets/a839d24f-b6ff-4e21-8bd5-ad1ba1033520)
 
 ![image](https://github.com/user-attachments/assets/ac46fa53-cae3-4254-83b0-908d3d85a02d)
+
+
+6. Click on Accept request again on the pop up panel.
+7. Click on Modify my route tables now on the top right corner.
+
+
+# Step 11: Update Route Tables
+
+1. Set up a way for traffic coming from VPC 1 to get to VPC 2.
+2. Set up a way for traffic coming from VPC 2 to get to VPC 1.
+
+
+## Update VPC 1's route table
+
+1. Scroll down and click on the Routes tab.
+
+2. Click Edit routes.
+
+3. . Let's add a new route!
+
+4. Add a new route to VPC 2 by entering the CIDR block 10.2.0.0/16 as our Destination.
+
+5. Under Target, select Peering Connection.
+
+6. Select VPC 1 <> VPC 2.
+
+![image](https://github.com/user-attachments/assets/25fb845c-2589-444e-96e4-66f45afae599)
+
+
+7. Click Save changes.
+8. Confirm that the new route appears in VPC 1's Routes tab!
+
+![image](https://github.com/user-attachments/assets/92c0680f-fe24-4017-9153-f1aaf324a4de)
+
+
+
+
+## Update VPC 2's route table
+
+
+## 1. The Destination is the CIDR block 10.1.0.0/16
+
+
+![image](https://github.com/user-attachments/assets/1100185c-c4d4-4fbe-986f-ac10524b0a76)
+
+
+2. Revisit the EC2 Instance Connect tab that's connected to NextWork Public Server.
+3. Woah! Lots of new lines coming through in the terminal.
+
+
+
+![image](https://github.com/user-attachments/assets/8ba9aa69-681c-4a1d-aef4-610c0a6569e1)
+
+
+## Congratulations!!! Successfully resolved the connectivity issue by setting up a peering architecture between VPC 1 and VPC 2!
