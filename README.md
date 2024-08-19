@@ -54,9 +54,13 @@
 ![image](https://github.com/user-attachments/assets/d7ed4bd1-f345-472e-8891-e661559e19d0)
 
 1. Select Launch instances.
-2. Since your first EC2 instance will be launched in your first VPC, let's name it 
+
+2. Since your first EC2 instance will be launched in your first VPC, let's name it
+
 3. For the Amazon Machine Image, select Amazon Linux 2023 AMI.
+
 4. For the Instance type, select t2.micro.
+
 5. For the Key pair (login) panel, select  Proceed without a key pair (not recommended).
 
 
@@ -68,10 +72,15 @@
 
 # Step 4: 
 
-1. Select VPC 1 
-2. Name your security group 
+
+1. Select VPC 1
+
+2. Name your security group
+
 3. Choose Add security group rule.
+
 4. For the new rule's Type, select All ICMP - IPv4.
+
 5. For the new rule's Source, select 0.0.0.0/0
 
 ![image](https://github.com/user-attachments/assets/325013ca-6e4b-4d64-b0e9-aeb4c44340d9)
@@ -79,10 +88,14 @@
 
 # Step 5: Launch an instance in VPC 2
 
-1. The Name is 
+1. The Name is
+
 2. The VPC is NextWork-vpc-2.
+
 3. Make sure you select Enable for Auto-assign public IP here too
-4. Name your security group 
+
+4. Name your security group
+
 5. Allow ICMP traffic from ALL IP addresses.
 
 
@@ -119,8 +132,11 @@
 # Step 7: 
 
 1. Head back to your VPC console.
+
 2. Select the Your VPCs page.
+
 3. Select NextWork-1-vpc.
+
 4. Scroll down to the Flow Logs tab, and click on Create flow log.
 
 
@@ -146,7 +162,9 @@
 
 
 1. Choose JSON.
+
 2. Delete everything in the Policy editor.
+
 3. Add this JSON policy to the empty Policy editor
 
 **
@@ -178,7 +196,9 @@
 
 
 4. Choose Next.
-5. For your policy's name, let's call it 
+
+5. For your policy's name, let's call it
+
 6. Choose Create policy
 
 
@@ -199,14 +219,18 @@
 ![image](https://github.com/user-attachments/assets/7dc1c81e-64b5-481f-aa1f-0ff214747436)
 
 7. Choose Next.
-8. On the Add permissions page, search for the policy you've created - 
+
+8. On the Add permissions page, search for the policy you've created -
+
 9. Select your policy.
 
 ![image](https://github.com/user-attachments/assets/85da3ade-2cb4-47bd-9fad-c13d16468e7e)
 
 
 10. Choose Next.
-11. Enter a name for your role - 
+
+11. Enter a name for your role -
+
 12. Choose Create role.
 
 
@@ -223,7 +247,9 @@
 
 
 1. Head to your EC2 console and the Instances page.
+
 2. Select the checkbox next to Instance - NextWork VPC 1.
+
 3. Select Connect.
 
 
@@ -232,7 +258,9 @@
 
 
 4. Leave open the EC2 Instance Connect tab, but head back to your EC2 console in a new tab.
+
 5. Select Instance - NextWork VPC 2.
+
 6. Copy Instance - NextWork VPC 2's Private IPv4 address.
 
 
@@ -242,7 +270,9 @@
 
 
 7. Switch back to the EC2 Instance Connect tab.
-8. Run ping [the Private IPv4 address you just copied] in the terminal. 
+
+8. Run ping [the Private IPv4 address you just copied] in the terminal.
+
 9. Your final result should look similar to something like  ping 10.0.1.227
 
 
@@ -274,7 +304,8 @@
 ![image](https://github.com/user-attachments/assets/7079be2e-f9cc-43e3-9b52-dda9263322c5)
 
 
-1. Name your Peering connection name as 
+1. Name your Peering connection name as
+
 2. Select NextWork-1-VPC for your VPC ID (Requester).
 
  
@@ -282,6 +313,7 @@
 
 
 4. For Region, select This Region.
+
 5. For VPC ID (Accepter), select NextWork-2-VPC
 
 ![image](https://github.com/user-attachments/assets/a2b53042-0eb1-4242-863e-7e7be97e3c32)
@@ -293,12 +325,14 @@
 
 
 6. Click on Accept request again on the pop up panel.
+
 7. Click on Modify my route tables now on the top right corner.
 
 
 # Step 11: Update Route Tables
 
 1. Set up a way for traffic coming from VPC 1 to get to VPC 2.
+
 2. Set up a way for traffic coming from VPC 2 to get to VPC 1.
 
 
@@ -320,6 +354,7 @@
 
 
 7. Click Save changes.
+
 8. Confirm that the new route appears in VPC 1's Routes tab!
 
 ![image](https://github.com/user-attachments/assets/92c0680f-fe24-4017-9153-f1aaf324a4de)
@@ -337,6 +372,7 @@
 
 
 2. Revisit the EC2 Instance Connect tab that's connected to NextWork Public Server.
+
 3. Woah! Lots of new lines coming through in the terminal.
 
 
@@ -352,8 +388,11 @@
 
 
 1. Head to your CloudWatch console.
+
 2. Select Log groups from the left hand navigation panel.
+
 3. Click into NextWorkVPCFlowLogsGroup.
+
 4. Click into your log stream to see flow logs from EC2 Instance 1!
 
 ![image](https://github.com/user-attachments/assets/d006b76f-4d34-4344-b9ed-289434103302)
