@@ -216,3 +216,77 @@
 
 
 ![image](https://github.com/user-attachments/assets/f89d4d79-5e80-44fc-b5ef-57dbd3168e31)
+
+
+
+# Step 9: Test VPC Peering
+
+
+1. Head to your EC2 console and the Instances page.
+2. Select the checkbox next to Instance - NextWork VPC 1.
+3. Select Connect.
+
+
+![image](https://github.com/user-attachments/assets/79ce7b42-5092-45e2-9702-2e07a4f2b412)
+
+
+
+4. Leave open the EC2 Instance Connect tab, but head back to your EC2 console in a new tab.
+5. Select Instance - NextWork VPC 2.
+6. Copy Instance - NextWork VPC 2's Private IPv4 address.
+
+
+
+![image](https://github.com/user-attachments/assets/8f1174e5-b63d-4df8-ac47-96095160b8ff)
+
+
+
+7. Switch back to the EC2 Instance Connect tab.
+8. Run ping [the Private IPv4 address you just copied] in the terminal. 
+9. Your final result should look similar to something like  ping 10.0.1.227
+
+
+![image](https://github.com/user-attachments/assets/e07d26a1-9258-436e-afca-e0f082d843ea)
+
+
+10. Head back to your EC2 console, and copy the Public IPv4 address of Instance - NextWork VPC 2.
+
+![image](https://github.com/user-attachments/assets/bc6b2c4b-25f9-4a0e-a197-d9201ed341c3)
+
+
+![image](https://github.com/user-attachments/assets/d5808539-b79d-4060-8b8e-22ee116c2e66)
+
+
+
+
+# Step 8: Create a Peering Connection
+
+
+
+![image](https://github.com/user-attachments/assets/967d982a-64b1-4ed9-9498-443e5a46b109)
+
+
+![image](https://github.com/user-attachments/assets/1d8c5c23-7b1f-40f4-9f0d-944776754bb7)
+
+![image](https://github.com/user-attachments/assets/1b1b5f59-79c3-4547-8a74-174e50f01e41)
+
+
+![image](https://github.com/user-attachments/assets/7079be2e-f9cc-43e3-9b52-dda9263322c5)
+
+
+1. Name your Peering connection name as 
+2. Select NextWork-1-VPC for your VPC ID (Requester).
+
+ 
+![image](https://github.com/user-attachments/assets/d3573720-b1d8-4627-8a86-7885b519692b)
+
+
+4. For Region, select This Region.
+5. For VPC ID (Accepter), select NextWork-2-VPC
+
+![image](https://github.com/user-attachments/assets/a2b53042-0eb1-4242-863e-7e7be97e3c32)
+
+
+![image](https://github.com/user-attachments/assets/a839d24f-b6ff-4e21-8bd5-ad1ba1033520)
+
+![image](https://github.com/user-attachments/assets/ac46fa53-cae3-4254-83b0-908d3d85a02d)
