@@ -345,3 +345,23 @@
 
 
 ## Congratulations!!! Successfully resolved the connectivity issue by setting up a peering architecture between VPC 1 and VPC 2!
+
+
+# Analyze Flow Logs
+
+
+
+1. Head to your CloudWatch console.
+2. Select Log groups from the left hand navigation panel.
+3. Click into NextWorkVPCFlowLogsGroup.
+4. Click into your log stream to see flow logs from EC2 Instance 1!
+
+![image](https://github.com/user-attachments/assets/d006b76f-4d34-4344-b9ed-289434103302)
+
+
+![image](https://github.com/user-attachments/assets/a14a47df-4872-490d-91b4-ed705b21c03c)
+
+![image](https://github.com/user-attachments/assets/928d743d-e952-4a37-afe5-4205b55f6db9)
+
+
+![image](https://github.com/user-attachments/assets/87f6230e-619a-4946-b6a6-8b9e514d69ee)
